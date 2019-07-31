@@ -1,7 +1,7 @@
 <template>
     <v-layout column align-center>
         <v-flex xs12>
-            <h1>Search</h1>
+            <label class="headline">Search Form</label>
         </v-flex>
         <v-form
                 ref="form"
@@ -46,7 +46,7 @@
         name: "SearchForm",
         data: () => ({
             valid: true,
-            name: "Saddam Hussein",
+            name: null,
             nameRules: [
                 (v: any) => !!v || "Name is required"
             ]

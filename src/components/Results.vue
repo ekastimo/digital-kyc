@@ -1,7 +1,7 @@
 <template>
     <v-layout column align-center>
         <v-flex xs12 sm6 md6>
-            <h1>Results</h1>
+            <label class="headline">Search Results</label>
         </v-flex>
         <v-flex xs12 sm6 md6>
             <template v-if="results">
@@ -11,10 +11,12 @@
                         <template v-for="match in results.matches">
                             <v-list-item three-line>
                                 <v-list-item-content>
-                                    <div class="overline mb-4">SDN: {{match.entry.sdnType}} <b>Score:
-                                        {{match.score}}</b></div>
-                                    <v-list-item-title class="mb-1">{{match.entry.firstName}}</v-list-item-title>
-                                    <v-list-item-subtitle>{{match.entry.remarks}}</v-list-item-subtitle>
+                                    <div class="overline mb-1">SDN: {{match.entry.sdnType}} <b>Score:
+                                        {{match.score | renderDecimal}}</b></div>
+                                    <v-list-item-title class="mb-1">{{match.entry.firstName}}&nbsp;{{match.entry.lastName}}</v-list-item-title>
+                                    <v-list-item-subtitle v-if="match.entry.remarks">{{match.entry.remarks}}
+                                    </v-list-item-subtitle>
+                                    <v-list-item-subtitle v-else>{{match.entry.title}}</v-list-item-subtitle>
                                 </v-list-item-content>
                             </v-list-item>
                             <v-divider class="mx-4"></v-divider>
