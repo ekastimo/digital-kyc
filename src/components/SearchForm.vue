@@ -46,7 +46,7 @@
         name: "SearchForm",
         data: () => ({
             valid: true,
-            name: null,
+            name: "",
             nameRules: [
                 (v: any) => !!v || "Name is required"
             ]
