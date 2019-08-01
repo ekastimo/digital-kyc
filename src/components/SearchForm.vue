@@ -10,6 +10,7 @@
             <v-text-field
                     v-model="name"
                     :rules="nameRules"
+                    @keyup.enter="submit"
                     label="Name"
                     required
             ></v-text-field>
