@@ -27,6 +27,7 @@ class KycModule extends VuexModule {
             this.onResults(data);
         } else {
             console.error('Failed: ', data);
+            console.log("Make sure you have the right API key and that its loaded from the .env file");
             this.onFailed();
         }
     }
