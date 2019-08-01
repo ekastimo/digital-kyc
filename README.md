@@ -1,5 +1,12 @@
 # digital-kyc
 
+Get yourself an API Key from from https://www.ofac-api.com/documentation.html
+Then set it as an environmental variable
+
+```
+set VUE_APP_OFAC_API_KEY=your-api-key
+```
+
 ## Project setup
 ```
 npm install
